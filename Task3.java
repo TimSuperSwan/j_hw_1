@@ -5,18 +5,18 @@ public class Task3 {
 
     public static void main (String[] args){
     Scanner sc = new Scanner(System.in, "cp866");
-    System.out.println("Калькулятор:");
-    String virogenie = sc.nextLine();
-    String[] parts = virogenie.split(" ");
+    System.out.print("Калькулятор: ");
+    String virogenie = sc.nextLine();// ввод с консоли выражения через пробел
+    String[] parts = virogenie.split(" "); // перевод введенного выражения в массив
     
-    double answer = calc(parts);
-    System.out.println(answer);
+    double answer = calc(parts); // создание переменной дабл и вызов метода калькулятора
+    System.out.println("Ответ: " + answer); // вывод ответа
 
-
+    sc.close();
 
     }
 
-    static double calc(String[] parts){
+    static double calc(String[] parts){    //метод калькулятора принимает массив возвращает дабл
         double a = Integer.parseInt(parts[0]);
         double b = Integer.parseInt(parts[2]);
         switch(parts[1]){
